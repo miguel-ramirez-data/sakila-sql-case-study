@@ -4,15 +4,15 @@
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&logoColor=black)
 
 Business analysis of the **Sakila** sample database (a DVD-rental company) using PostgreSQL.
-Eight realistic questions from management are answered with SQL; every query documents its
-**objective, approach and assumptions**, results are exported to CSV, and key findings are visualized in Power BI.
+Eight realistic questions from management are answered with SQL, results are exported to CSV,
+and key findings are visualized in Power BI.
 
 ## Skills demonstrated
 
 - Multi-table `JOIN`s across up to 6 tables (category → film → inventory → rental → payment)
 - Aggregations, `GROUP BY`, date functions (`EXTRACT`, `TO_CHAR`)
 - Anti-join with `LEFT JOIN … IS NULL` to find never-rented titles
-- Documenting assumptions behind every metric
+- Turning query results into business recommendations
 - Exporting results and building visuals in Power BI
 
 ## Repository structure
@@ -50,7 +50,7 @@ See the full [data dictionary](DataDictionary.md).
 | 4 | What is the monthly revenue trend in 2007? | [SQL](SQL/04_monthly_revenue_2007.sql) | [CSV](Results/04_monthly_revenue_2007.csv) | Data covers only Feb–May 2007: revenue climbs from $8.4K (Feb) to $28.6K (Apr); May is a partial month ($514). The window is too short to confirm seasonality. |
 | 5 | Which films have never been rented? | [SQL](SQL/05_films_never_rented.sql) | [CSV](Results/05_films_never_rented.csv) | 42 titles have never been rented — candidates for promotion, bundling or removal. |
 | 6 | What are the top 3 categories by revenue? | [SQL](SQL/06_top_categories_revenue.sql) | [CSV](Results/06_top_categories_revenue.csv) | **Sports, Sci-Fi and Animation** generate the most revenue and should lead stock planning. |
-| 7 | Which actors generate the most revenue? | [SQL](SQL/07_top_actors_revenue.sql) | [CSV](Results/07_top_actors_revenue.csv) | A few actors (e.g. Susan Davis, Gina Degeneres) drive a large share of film revenue. |
+| 7 | Which actors generate the most revenue? | [SQL](SQL/07_top_actors_revenue.sql) | [CSV](Results/07_top_actors_revenue.csv) | A few actors (e.g. Susan Davis, Gina Degeneres) drive a large share of film revenue (revenue is credited to every actor in a film). |
 | 8 | What are the busiest rental days? | [SQL](SQL/08_busiest_rental_day.sql) | [CSV](Results/08_busiest_rental_day.csv) | Tuesday (2,463) and Sunday (2,320) lead, but the spread between days is only ~12%, so demand is fairly even. |
 
 ## Visualizations (Power BI)
